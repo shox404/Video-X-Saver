@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  background: url("./Assets/Bg.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(100px);
+}
+
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: url("./Assets/Texture.png");
+  z-index: 1;
+}
+
+body::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+  background: #000000;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: #161616;
+}
